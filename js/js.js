@@ -271,8 +271,8 @@
 // date.setDate(date.getDate() + 1);
 // alert(date);
 
-//HW5
-//1
+// //HW5-6
+// //1
 // var i=+prompt('Введіть початок діапазону');
 // var j=+prompt('Введіть кінець діапазону');
 // var sum=0;
@@ -281,8 +281,8 @@
 //     i++;
 // }
 // alert('Сума ряду дорівнює ' + sum);
-
-//2
+//
+// //2
 // var num1=+prompt('Введіть перше число');
 // var num2=+prompt('Введіть друге число');
 // var i=2;
@@ -295,8 +295,8 @@
 //    i++;
 // }
 // alert('Найбільший спільний дільник це - ' + max);
-
-//3
+//
+// //3
 // var num=+prompt('Введіть число');
 // var i=2;
 // var result='Дільники числа ' + num + ' є числа: ';
@@ -307,8 +307,8 @@
 //     i++;
 // }
 // alert(result);
-
-//4
+//
+// //4
 // var num=+prompt('Введіть число');
 // var i=0;
 // var top_num=1;
@@ -317,8 +317,8 @@
 //     top_num*=10;
 // }
 // alert('Кількість цифр - ' + i);
-
-//5
+//
+// //5
 // var dod=0;
 // var vid=0;
 // var nol=0;
@@ -342,8 +342,8 @@
 // document.write('Нулів було - ' + nol);
 // document.write('Парних чисел було - ' + par);
 // document.write('Непарних чисел було - ' + nep);
-
-//6
+//
+// //6
 // var repeat = true;
 // var result = 0;
 // while(repeat) {
@@ -363,8 +363,8 @@
 //     alert('Результат = ' + result);
 //     repeat = confirm('Бажаєте ще раз?');
 // }
-
-//7
+//
+// //7
 // var num = +prompt('Введіть число');
 // var zmi = +prompt('Введіть на скільки змістити');
 // var quan = 1;
@@ -391,8 +391,8 @@
 //     num=rez;
 // }
 // document.write('Результот ' + rez + ' ');
-
-// //8
+//
+// // //8
 // var day = '';
 // var date = new Date();
 // do {
@@ -415,16 +415,16 @@
 //     date.setDate(date.getDate() + 1);
 // }
 // while(rez);
-
-// //9
+//
+// // //9
 // for(i = 2; i < 10; i++){
 //     document.write('<p>\n</p>')
 //     for(j = 1; j < 11; j++){
 //         document.write(i * j + '  ');
 //     }
 // }
-
-// //10
+//
+// // //10
 // var x = +prompt('загадайте число від 0 до 100');
 // var min_n = 0;
 // var max_n = 100;
@@ -433,18 +433,16 @@
 // var N = 0;
 // var ost_N =0;
 // do {
-//     alert('Нач ' + min_n + ' Кон ' + max_n);
-//     N = (max_n - min_n)/2;
-//     alert('N ' + N);
+//     N = min_n + (max_n - min_n)/2;
+//     // alert('N !!!!' + N);
 //     ost_N = (max_n - min_n)%2;
-//     alert('ost_N ' + ost_N);
 //     if(ost_N > 0) {
-//         N = N - ost_N/10 + 1;
-//         alert('N - ost_N ' + N);
+//         N = N - ost_N/2;
+//         // alert('N - ost_N/2 = ' + N);
 //     }
 //     if (N == x){
 //         win = 1;
-//         alert('win=1');
+//         // alert('win=1');
 //         break;
 //     }
 //     quest = confirm('Ваше число меньше ніж ' + N + '?');
@@ -454,31 +452,144 @@
 //     }
 //     else {
 //         min_n = N;
+//
 //     }
-//     alert('Нач ' + min_n + ' Кон ' + max_n);
+//     // alert('Нач ' + min_n + ' Кон ' + max_n);
 // }
 // while(win != 1);
 // alert('Ви загадали число - ' + N);
 
 
-function input_num(num1, num2, bool){
-    var result = '';
-    var i = 0;
-    for(i=num1; i<=num2; ++i) {
-        if(num1%2==0 && bool) {
-            result = result + num1 + ' ';
-        }
-        else if(num1%2!=0 && bool===false) {
-            result = result + num1 + ' ';
-        }
-    }
-    return result;
-}
+// function input_num(num1, num2, bool){
+//     var result = '';
+//     var i = 0;
+//     for(i=num1; i<=num2; ++i) {
+//         if(num1%2==0 && bool) {
+//             result = result + num1 + ' ';
+//         }
+//         else if(num1%2!=0 && bool===false) {
+//             result = result + num1 + ' ';
+//         }
+//     }
+//     return result;
+// }
+//
+//
+// var num1 = +prompt('Введіть початок діапозону: ');
+// var num2 = +prompt('Введіть кінець діапозону діапозону: ');
+// var num3 = +prompt('Які значення виводить? 1 - чьотні, 0 - не чьотні');
+// if(num3==1) bool = true;
+// else bool = false;
+// alert(input_num(num1, num2, bool));
 
 
-var num1 = +prompt('Введіть початок діапозону: ');
-var num2 = +prompt('Введіть кінець діапозону діапозону: ');
-var num3 = +prompt('Які значення виводить? 1 - чьотні, 0 - не чьотні');
-if(num3==1) bool = true;
-else bool = false;
-alert(input_num(num1, num2, bool));
+////HW7
+////1
+// function return_result(a,b){
+// if(a < b)
+//     return -1;
+// else if (a > b)
+//     return 1;
+// else
+//     return 0;
+//
+// }
+//
+// var num1 = +prompt('Введіть перше число: ');
+// var num2 = +prompt('Введіть друге число: ');
+// alert(return_result(num1, num2));
+
+////2
+// function factorial(a){
+//     var result = 1;
+//     for(i=2; i<=a; ++i) {
+//         result = result*i;
+//     }
+//     return result;
+// }
+// var num = +prompt('Введіть число: ');
+// alert(factorial(num));
+
+// //3
+// function magic(a,b,c){
+//     return Number(a+b+c);
+// }
+//
+// var num1 = prompt('Введіть перше число: ');
+// var num2 = prompt('Введіть друге число: ');
+// var num3 = prompt('Введіть третэ число: ');
+// alert(magic(num1,num2,num3));
+// // alert(typeof(magic(num1,num2,num3)));
+
+// //4
+// //
+// // function func(a,b=0){
+// // if(b==0) {
+// //     return a*a;
+// // }
+// // else{
+// //     return a*b;
+// // }
+// // }
+// //
+// // var num1 = +prompt('Введіть перше число: ');
+// // var num2 = +prompt('Введіть друге число: ');
+// // alert(func(num1,num2));
+
+// //5
+// function func(a){
+//     var result = 0;
+//     for(i=1; i<a; ++i) {
+//         if(a%i == 0){
+//             result = result + i;
+//             //alert(result);
+//         }
+//     }
+//     if(result == a) {
+//         return('Число ' + a + ' совершенное')
+//     }
+//     else{
+//         return('Число ' + a + ' не совершенное')
+//     }
+// }
+// var num = +prompt('Введіть число: ');
+// alert(func(num));
+
+// //6
+// function func1(a){
+//     var result = 0;
+//     for(i=1; i<a; ++i) {
+//         if(a%i == 0){
+//             result = result + i;
+//         }
+//     }
+//     if(result == a) {
+//         return(true);
+//     }
+//     else{
+//         return(false);
+//     }
+// }
+// function func(a,b){
+//     var result = '';
+//     for(i=a; i<=b; ++i) {
+//         if (func1(i)){
+//             result = result + i + ' ';
+//         }
+//     }
+//     return(result);
+// }
+// var num1 = +prompt('Введіть початок діапозону: ');
+// var num2 = +prompt('Введіть кінець діапозону діапозону: ');
+// alert(func(num1, num2));
+
+//7
+// function func(a,b='00',c='00'){
+//     var result = '';
+//     if (a < 10) a='0'+a;
+//     if
+// }
+// var hours = +prompt('Введіть години: ');
+// var minets = +prompt('Введіть хвилини: ');
+// var seconds = +prompt('Введіть секунди: ');
+// alert(func(hours,minets,seconds));
