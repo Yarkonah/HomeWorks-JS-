@@ -484,112 +484,206 @@
 
 
 ////HW7
-////1
-// function return_result(a,b){
-// if(a < b)
-//     return -1;
-// else if (a > b)
-//     return 1;
-// else
-//     return 0;
+//1
+function return_result(a,b){
+if(a < b)
+    return -1;
+else if (a > b)
+    return 1;
+else
+    return 0;
+
+}
+
+var num1 = +prompt('Введіть перше число: ');
+var num2 = +prompt('Введіть друге число: ');
+alert(return_result(num1, num2));
+
+//2
+function factorial(a){
+    var result = 1;
+    for(i=2; i<=a; ++i) {
+        result = result*i;
+    }
+    return result;
+}
+var num = +prompt('Введіть число: ');
+alert(factorial(num));
+
+//3
+function magic(a,b,c){
+    return Number(a+b+c);
+}
+
+var num1 = prompt('Введіть перше число: ');
+var num2 = prompt('Введіть друге число: ');
+var num3 = prompt('Введіть третэ число: ');
+alert(magic(num1,num2,num3));
+// alert(typeof(magic(num1,num2,num3)));
+
+//4
 //
+// function func(a,b=0){
+// if(b==0) {
+//     return a*a;
+// }
+// else{
+//     return a*b;
+// }
 // }
 //
 // var num1 = +prompt('Введіть перше число: ');
 // var num2 = +prompt('Введіть друге число: ');
-// alert(return_result(num1, num2));
+// alert(func(num1,num2));
 
-////2
-// function factorial(a){
-//     var result = 1;
-//     for(i=2; i<=a; ++i) {
-//         result = result*i;
-//     }
-//     return result;
-// }
-// var num = +prompt('Введіть число: ');
-// alert(factorial(num));
+//5
+function func(a){
+    var result = 0;
+    for(i=1; i<a; ++i) {
+        if(a%i == 0){
+            result = result + i;
+            //alert(result);
+        }
+    }
+    if(result == a) {
+        return('Число ' + a + ' совершенное')
+    }
+    else{
+        return('Число ' + a + ' не совершенное')
+    }
+}
+var num = +prompt('Введіть число: ');
+alert(func(num));
 
-// //3
-// function magic(a,b,c){
-//     return Number(a+b+c);
-// }
-//
-// var num1 = prompt('Введіть перше число: ');
-// var num2 = prompt('Введіть друге число: ');
-// var num3 = prompt('Введіть третэ число: ');
-// alert(magic(num1,num2,num3));
-// // alert(typeof(magic(num1,num2,num3)));
-
-// //4
-// //
-// // function func(a,b=0){
-// // if(b==0) {
-// //     return a*a;
-// // }
-// // else{
-// //     return a*b;
-// // }
-// // }
-// //
-// // var num1 = +prompt('Введіть перше число: ');
-// // var num2 = +prompt('Введіть друге число: ');
-// // alert(func(num1,num2));
-
-// //5
-// function func(a){
-//     var result = 0;
-//     for(i=1; i<a; ++i) {
-//         if(a%i == 0){
-//             result = result + i;
-//             //alert(result);
-//         }
-//     }
-//     if(result == a) {
-//         return('Число ' + a + ' совершенное')
-//     }
-//     else{
-//         return('Число ' + a + ' не совершенное')
-//     }
-// }
-// var num = +prompt('Введіть число: ');
-// alert(func(num));
-
-// //6
-// function func1(a){
-//     var result = 0;
-//     for(i=1; i<a; ++i) {
-//         if(a%i == 0){
-//             result = result + i;
-//         }
-//     }
-//     if(result == a) {
-//         return(true);
-//     }
-//     else{
-//         return(false);
-//     }
-// }
-// function func(a,b){
-//     var result = '';
-//     for(i=a; i<=b; ++i) {
-//         if (func1(i)){
-//             result = result + i + ' ';
-//         }
-//     }
-//     return(result);
-// }
-// var num1 = +prompt('Введіть початок діапозону: ');
-// var num2 = +prompt('Введіть кінець діапозону діапозону: ');
-// alert(func(num1, num2));
+//6
+function func1(a){
+    var result = 0;
+    for(i=1; i<a; ++i) {
+        if(a%i == 0){
+            result = result + i;
+        }
+    }
+    if(result == a) {
+        return(true);
+    }
+    else{
+        return(false);
+    }
+}
+function func(a,b){
+    var result = '';
+    for(i=a; i<=b; ++i) {
+        if (func1(i)){
+            result = result + i + ' ';
+        }
+    }
+    return(result);
+}
+var num1 = +prompt('Введіть початок діапозону: ');
+var num2 = +prompt('Введіть кінець діапозону діапозону: ');
+alert(func(num1, num2));
 
 //7
-// function func(a,b='00',c='00'){
-//     var result = '';
-//     if (a < 10) a='0'+a;
-//     if
-// }
+function func(a,b,c){
+    if (a < 10) a='0'+a;
+    if (b < 10) b='0'+b;
+    if (c < 10) b='0'+c;
+    return(a+':'+b+':'+c);
+}
 // var hours = +prompt('Введіть години: ');
 // var minets = +prompt('Введіть хвилини: ');
 // var seconds = +prompt('Введіть секунди: ');
-// alert(func(hours,minets,seconds));
+//alert(func(hours,minets,seconds));
+var date = new Date();
+var hours = date.getHours();
+var minets = date.getMinutes();
+var seconds = date.getSeconds();
+alert(func(hours,minets,seconds))
+
+//8
+function func(a,b,c){
+    return a*60*60 + b*60 + c;
+}
+// var date = new Date();
+// var hours = date.getHours();
+// var minets = date.getMinutes();
+// var seconds = date.getSeconds();
+var hours = +prompt('Введіть години: ');
+var minets = +prompt('Введіть хвилини: ');
+var seconds = +prompt('Введіть секунди: ');
+alert(func(hours,minets,seconds))
+
+//9
+function sec_to_text(a=0,b=0,c=0){
+    if (a < 10) a='0'+a;
+    if (b < 10) b='0'+b;
+    if (c < 10) c='0'+c;
+    return (a + ':' + b + ':' + c);
+}
+function convert_sec(a){
+    var sec = a;
+    var min = 0;
+    var hour = 0;
+    if (sec > 60){
+        min = parseInt(sec/60);
+        sec = parseInt(sec%60);
+    }
+    if (min > 60){
+        hour = parseInt(min/60);
+        min = parseInt(min%60);
+    }
+    return sec_to_text(hour,min,sec);
+}
+
+var seconds = +prompt('Введіть секунди: ');
+if (seconds >= 86400){
+    alert('Введіть значення до 86400')
+}
+else{
+    alert(convert_sec(seconds));
+}
+
+//10
+function func(a,b,c){
+    return a*60*60 + b*60 + c;
+}
+function sec_to_text(a=0,b=0,c=0){
+    if (a < 10) a='0'+a;
+    if (b < 10) b='0'+b;
+    if (c < 10) c='0'+c;
+    return (a + ':' + b + ':' + c);
+}
+function convert_sec(a){
+    var sec = a;
+    var min = 0;
+    var hour = 0;
+    // if (sec < 0) {
+    //     sec = 24*60*60 + sec;
+    // }
+    if (sec > 60){
+        min = parseInt(sec/60);
+        sec = parseInt(sec%60);
+    }
+    if (min > 60){
+        hour = parseInt(min/60);
+        min = parseInt(min%60);
+    }
+    return sec_to_text(hour,min,sec);
+}
+var hours = +prompt('Введіть години: ');
+var minets = +prompt('Введіть хвилини: ');
+var seconds = +prompt('Введіть секунди: ');
+var hours1 = +prompt('Введіть години: ');
+var minets1 = +prompt('Введіть хвилини: ');
+var seconds1 = +prompt('Введіть секунди: ');
+var sec = func(hours,minets,seconds);
+var sec1 = func(hours1,minets1,seconds1);
+if (sec > sec1){
+    alert(convert_sec(sec - sec1));
+}
+else{
+    alert(convert_sec(sec1 - sec));
+}
+
+
+
