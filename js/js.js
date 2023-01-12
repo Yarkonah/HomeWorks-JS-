@@ -483,7 +483,7 @@
 // alert(input_num(num1, num2, bool));
 
 
-////HW7
+//HW7
 //1
 function return_result(a,b){
 if(a < b)
