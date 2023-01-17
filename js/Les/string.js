@@ -13,6 +13,6 @@ const first_letter = fullname[0];
 // replaseAll стрЗаменить
 //indexOf получение индекса символа
 
-//slice срез
+//slice срез 
 
 
